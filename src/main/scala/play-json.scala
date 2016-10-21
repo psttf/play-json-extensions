@@ -90,7 +90,7 @@ TO SOLVE THIS
    import org.cvogt.play.json.SingletonEncoder.simpleName
    import org.cvogt.play.json.implicits.formatSingleton
 """)
-final class OptionValidationDispatcher[T] private[json] (val validate: JsLookupResult => JsResult[T]) extends AnyVal
+final class OptionValidationDispatcher[T](val validate: JsLookupResult => JsResult[T]) extends AnyVal
 
 object OptionValidationDispatcher{
   // these methods allow to dispatch via overloading
